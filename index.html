@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LPU Library Seat and Resource Booking System - a student-developed HTML5 and CSS3 demonstration project for Lovely Professional University, Phagwara, Punjab.">
+<title>LPU Library | Seat &amp; Resource Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="notice" role="note">Student-developed demonstration project for Internet Programming. This is not an official LPU website or a live booking service.</div>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="LPU Library home">
+      <span class="mark" aria-hidden="true">LPU</span>
+      <span class="brand-text"><strong>LPU LIBRARY</strong><small>Lovely Professional University</small></span>
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+    <label for="menu-toggle" class="burger" aria-hidden="true"><span></span></label>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#booking" class="btn small">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Phagwara, Punjab, India</p>
+        <h1>LPU Library Seat and Resource Booking System</h1>
+        <p class="tagline">Your Space to Learn, Research and Grow</p>
+        <p class="lead">Welcome, LPU students. Plan your study session by choosing a seat, a study zone and the resources you need, all from one simple page.</p>
+        <p><a class="btn" href="#booking">Reserve a Seat</a> <a class="btn ghost" href="#services">Explore Services</a></p>
+      </div>
+      <aside class="hero-card" aria-label="Project summary">
+        <h2>Project at a glance</h2>
+        <dl>
+          <dt>Course</dt><dd>Internet Programming</dd>
+          <dt>Built with</dt><dd>HTML5 &amp; CSS3 only</dd>
+          <dt>Type</dt><dd>Front-end demonstration</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap narrow">
+      <h2>About this project</h2>
+      <p>The LPU Library Seat and Resource Booking System imagines how students at Lovely Professional University could reserve study spaces and library resources online. It was created to practise semantic HTML5 structure, responsive CSS3 layouts, forms and accessible design.</p>
+    </div>
+  </section>
+
+  <section class="section alt" id="services">
+    <div class="wrap">
+      <h2>Library services</h2>
+      <p class="sub">Sample service categories used to demonstrate the interface.</p>
+      <div class="cards">
+        <article class="card"><span class="ico" aria-hidden="true">01</span><h3>Seat Booking</h3><p>Choose a seat in a reading or study zone for your session.</p></article>
+        <article class="card"><span class="ico" aria-hidden="true">02</span><h3>Group Discussion Rooms</h3><p>Request a room for project meetings and team study.</p></article>
+        <article class="card"><span class="ico" aria-hidden="true">03</span><h3>Digital Resources</h3><p>Reserve a computer terminal for e-books and journals.</p></article>
+        <article class="card"><span class="ico" aria-hidden="true">04</span><h3>Reference Books</h3><p>Request course and reference material for your visit.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>Choose</h3><p>Pick your date, time and study zone.</p></li>
+        <li><h3>Select</h3><p>Tap a seat on the sample layout map.</p></li>
+        <li><h3>Confirm</h3><p>Review the booking summary on screen.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt" id="booking">
+    <div class="wrap">
+      <h2>Book a seat or resource</h2>
+      <p class="sub">Demonstration only: nothing is sent or saved. Seat layout is a sample and does not show real availability.</p>
+      <div class="booking">
+        <form id="bookingForm" novalidate>
+          <fieldset>
+            <legend>Student details</legend>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" placeholder="Enter your name">
+            <label for="regno">Registration number</label>
+            <input id="regno" name="regno" type="text" required inputmode="numeric" placeholder="Enter your registration number">
+          </fieldset>
+          <fieldset>
+            <legend>Booking details</legend>
+            <label for="type">Resource type</label>
+            <select id="type" name="type" required>
+              <option value="">Select a type</option>
+              <option>Study seat</option>
+              <option>Group discussion room</option>
+              <option>Digital resource terminal</option>
+              <option>Reference book request</option>
+            </select>
+            <label for="zone">Study zone (sample)</label>
+            <select id="zone" name="zone" required>
+              <option value="">Select a zone</option>
+              <option>Silent Study Zone</option>
+              <option>General Reading Zone</option>
+              <option>Discussion Zone</option>
+            </select>
+            <div class="row">
+              <div><label for="date">Date</label><input id="date" name="date" type="date" required></div>
+              <div><label for="start">Start time</label><input id="start" name="start" type="time" required></div>
+              <div><label for="end">End time</label><input id="end" name="end" type="time" required></div>
+            </div>
+            <label for="notes">Notes (optional)</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Course, subject or special request"></textarea>
+          </fieldset>
+          <p id="error" class="error" role="alert" hidden></p>
+          <button class="btn" type="submit">Confirm Booking</button>
+          <button class="btn ghost" type="reset" id="resetBtn">Reset</button>
+        </form>
+
+        <div>
+          <div class="panel">
+            <h3>Sample seat layout</h3>
+            <div class="legend"><span><i class="dot free"></i>Available</span><span><i class="dot sel"></i>Selected</span></div>
+            <div class="seats" id="seats" role="group" aria-label="Seat selection"></div>
+            <p id="seatInfo" class="muted">No seat selected.</p>
+          </div>
+          <div class="panel summary" id="summary" aria-live="polite">
+            <h3>Booking summary</h3>
+            <p class="muted">Your confirmed details will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <strong>LPU LIBRARY</strong>
+      <p>Your Space to Learn, Research and Grow</p>
+    </div>
+    <p class="small">Student project for Lovely Professional University, Phagwara, Punjab, India. Not affiliated with or endorsed by the university. For official library information, please contact the LPU Library directly.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var seatsEl = document.getElementById('seats');
+  var info = document.getElementById('seatInfo');
+  var selected = null;
+  var rows = 'ABCD';
+  for (var r = 0; r < rows.length; r++) {
+    for (var n = 1; n <= 6; n++) {
+      var b = document.createElement('button');
+      var id = rows[r] + n;
+      b.type = 'button'; b.className = 'seat'; b.textContent = id;
+      b.setAttribute('aria-pressed', 'false');
+      b.setAttribute('aria-label', 'Seat ' + id);
+      seatsEl.appendChild(b);
+    }
+  }
+  seatsEl.addEventListener('click', function (e) {
+    var t = e.target.closest('.seat'); if (!t) return;
+    var prev = seatsEl.querySelector('.selected');
+    if (prev) { prev.classList.remove('selected'); prev.setAttribute('aria-pressed', 'false'); }
+    if (selected === t.textContent) { selected = null; info.textContent = 'No seat selected.'; return; }
+    selected = t.textContent;
+    t.classList.add('selected'); t.setAttribute('aria-pressed', 'true');
+    info.textContent = 'Selected seat: ' + selected;
+  });
+
+  var form = document.getElementById('bookingForm');
+  var err = document.getElementById('error');
+  var sum = document.getElementById('summary');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = form.elements, msg = '';
+    ['name', 'regno', 'type', 'zone', 'date', 'start', 'end'].forEach(function (k) {
+      if (!f[k].value.trim() && !msg) msg = 'Please fill in all required fields.';
+    });
+    if (!msg && f.end.value <= f.start.value) msg = 'End time must be after start time.';
+    if (!msg && f.type.value === 'Study seat' && !selected) msg = 'Please select a seat from the layout.';
+    if (msg) { err.textContent = msg; err.hidden = false; return; }
+    err.hidden = true;
+    sum.innerHTML = '<h3>Booking summary</h3><ul></ul><p class="ok">Demo booking recorded on screen only.</p>';
+    var ul = sum.querySelector('ul');
+    [['Name', f.name.value], ['Reg. No.', f.regno.value], ['Type', f.type.value],
+     ['Zone', f.zone.value], ['Seat', selected || 'Not applicable'],
+     ['Date', f.date.value], ['Time', f.start.value + ' to ' + f.end.value]
+    ].forEach(function (p) {
+      var li = document.createElement('li');
+      var s = document.createElement('strong'); s.textContent = p[0] + ': ';
+      li.appendChild(s); li.appendChild(document.createTextNode(p[1]));
+      ul.appendChild(li);
+    });
+  });
+  form.addEventListener('reset', function () {
+    var prev = seatsEl.querySelector('.selected');
+    if (prev) prev.classList.remove('selected');
+    selected = null; info.textContent = 'No seat selected.'; err.hidden = true;
+    sum.innerHTML = '<h3>Booking summary</h3><p class="muted">Your confirmed details will appear here.</p>';
+  });
+})();
+</script>
+</body>
+</html>
